@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>E-Cell — Trinity Polytechnic Pune</title>
+  <meta name="description" content="The Entrepreneurship Cell of Trinity Polytechnic, Pune. We turn students into founders. E-Summit, ideathons, startup bootcamps and a 100+ founder community." />
+  <meta name="theme-color" content="#050505" />
+  <meta property="og:title" content="E-Cell — Trinity Polytechnic Pune" />
+  <meta property="og:description" content="We turn students into founders." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23050505'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='%23ff5a1f' text-anchor='middle'>E</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== Preloader ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__mark">
+        <svg viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="46" stroke="rgba(255,255,255,.14)" stroke-width="2"/>
+          <circle class="preloader__ring" cx="50" cy="50" r="46" stroke="#ff5a1f" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>E</span>
+      </div>
+      <div class="preloader__count" id="preloaderCount">00</div>
+    </div>
+    <div class="preloader__bar"><span id="preloaderBar"></span></div>
+  </div>
+
+  <!-- ===== Fixed UI ===== -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top" data-menu-close>
+      <img class="nav__logo-img" src="./images/logo-mark.png" alt="E-Cell TeamTrinity logo" />
+      <span class="nav__logo-text">Team<em>Trinity</em></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about" data-menu-close>About</a>
+      <a href="#pillars">Pillars</a>
+      <a href="#events">Events</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#film">Reveal</a>
+      <a href="#team">Team</a>
+      <a href="#join">Join</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links">
+      <a href="#about" data-menu-close><i>01</i>About</a>
+      <a href="#pillars" data-menu-close><i>02</i>Pillars</a>
+      <a href="#events" data-menu-close><i>03</i>Events</a>
+      <a href="#gallery" data-menu-close><i>04</i>Gallery</a>
+      <a href="#film" data-menu-close><i>05</i>Reveal</a>
+      <a href="#team" data-menu-close><i>06</i>Team</a>
+      <a href="#join" data-menu-close><i>07</i>Join us</a>
+    </nav>
+    <div class="menu__foot">
+      <div>
+        <span>Trinity Polytechnic, Pune</span>
+        <span>ecelltpp001@gmail.com</span>
+      </div>
+      <div class="menu__social">
+        <a href="https://www.instagram.com/ecelltpp" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.linkedin.com/in/e-cell-trinity-polytechnic-pune-796802428/" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cursor" id="cursor"><span class="cursor__dot"></span><span class="cursor__label" id="cursorLabel"></span></div>
+
+  <!-- ===== WebGL canvas ===== -->
+  <canvas id="webgl" class="webgl" aria-hidden="true"></canvas>
+  <div class="progress" aria-hidden="true"><span class="progress__bar" id="progress"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__frame frame">
+        <span class="frame__c frame__c--tl"></span>
+        <span class="frame__c frame__c--tr"></span>
+        <span class="frame__c frame__c--bl"></span>
+        <span class="frame__c frame__c--br"></span>
+      </div>
+
+      <div class="hero__top">
+        <p class="hero__kicker reveal">Trinity Polytechnic · Pune <i>—</i> Est. 2026</p>
+        <p class="hero__kicker hero__kicker--right reveal">Scroll to explore <i>↓</i></p>
+      </div>
+
+      <h1 class="hero__title" aria-label="E-Cell Trinity">
+        <span class="hero__line"><span class="hero__word" data-split>WE BUILD</span></span>
+        <span class="hero__line"><span class="hero__word hero__word--accent" data-split>FOUNDERS</span></span>
+      </h1>
+
+      <div class="hero__bottom">
+        <p class="hero__sub reveal">The Entrepreneurship Cell of Trinity Polytechnic.<br />From first idea to first customer — right here on campus.</p>
+        <div class="hero__hint">
+          <span class="hero__hint-ring"></span>
+          <span>drag to rotate</span>
+        </div>
+        <a class="hero__cta magnetic" href="#join" data-cursor="join">
+          <span>Join the cell</span>
+          <i data-arrow>→</i>
+        </a>
+      </div>
+
+      <div class="hero__side reveal">
+        <span>EST.</span><span class="hero__side-year">2026</span><span>PUNE · IN</span>
+      </div>
+    </section>
+
+    <!-- ===== Marquee ===== -->
+    <section class="marquee-sec" aria-hidden="true">
+      <div class="marquee" id="marquee">
+      <div class="marquee__track">
+        <span>INSPIRE</span><i>✦</i><span>INNOVATE</span><i>✦</i><span>IMPACT</span><i>✦</i>
+        <span>INSPIRE</span><i>✦</i><span>INNOVATE</span><i>✦</i><span>IMPACT</span><i>✦</i>
+        <span>INSPIRE</span><i>✦</i><span>INNOVATE</span><i>✦</i><span>IMPACT</span><i>✦</i>
+        <span>INSPIRE</span><i>✦</i><span>INNOVATE</span><i>✦</i><span>IMPACT</span><i>✦</i>
+      </div>
+      </div>
+    </section>
+
+    <!-- ===== Upcoming event ===== -->
+    <section class="next section" id="next">
+      <div class="section__head">
+        <span class="section__num reveal">00</span>
+        <span class="section__label reveal">Next up</span>
+      </div>
+
+      <div class="next__grid">
+        <figure class="next__media">
+          <img class="next__poster" src="./images/illuminate-poster.jpg" alt="ILLUMINATE — official event poster" loading="lazy" />
+        </figure>
+
+        <div class="next__info">
+          <p class="next__kicker reveal">Mark the date — flagship</p>
+          <h2 class="next__title reveal">ILLUMI<em>NATE</em></h2>
+          <p class="next__meta reveal">10 October 2026 · 10:00 AM IST · Trinity Polytechnic, Pune</p>
+
+          <div class="cd reveal" id="countdown" role="timer" aria-label="Countdown to E-Summit 2026">
+            <div class="cd__cell"><span class="cd__num" id="cdD">00</span><span class="cd__label">Days</span></div>
+            <div class="cd__cell"><span class="cd__num" id="cdH">00</span><span class="cd__label">Hours</span></div>
+            <div class="cd__cell"><span class="cd__num" id="cdM">00</span><span class="cd__label">Mins</span></div>
+            <div class="cd__cell"><span class="cd__num" id="cdS">00</span><span class="cd__label">Secs</span></div>
+          </div>
+
+          <div class="next__actions reveal">
+            <a class="next__cta next__cta--register magnetic" href="https://forms.gle/oLbRP7qtLhRV2R8F9" target="_blank" rel="noopener" data-cursor="register">
+              <span>Register for ILLUMINATE</span><i data-arrow>→</i>
+            </a>
+            <span class="next__deadline">Registrations close <strong>30 September 2026</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="about section" id="about">
+      <div class="section__head">
+        <span class="section__num reveal">01</span>
+        <span class="section__label reveal">Who we are</span>
+      </div>
+      <h2 class="about__title">
+        <span class="reveal">A student-run cell that turns</span>
+        <span class="reveal"><em>campus curiosity</em> into</span>
+        <span class="reveal">working startups.</span>
+      </h2>
+      <div class="about__grid">
+        <div class="about__card reveal">
+          <span class="about__card-num">01</span>
+          <h3>Learn</h3>
+          <p>Weekly founder talks, teardown sessions and startup case studies — practical knowledge over theory.</p>
+        </div>
+        <div class="about__card reveal">
+          <span class="about__card-num">02</span>
+          <h3>Build</h3>
+          <p>Ideathons and build weekends where teams ship real prototypes, not slide decks.</p>
+        </div>
+        <div class="about__card reveal">
+          <span class="about__card-num">03</span>
+          <h3>Launch</h3>
+          <p>Mentor reviews, incubator referrals and pitch days that put student ventures in front of real investors.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Pillars ===== -->
+    <section class="pillars section" id="pillars">
+      <div class="section__head">
+        <span class="section__num reveal">02</span>
+        <span class="section__label reveal">What we do</span>
+      </div>
+      <div class="pillars__list" id="pillarList">
+        <a class="pillar" href="#events" data-cursor="view">
+          <span class="pillar__idx">01</span>
+          <h3 class="pillar__name">E-Summit</h3>
+          <p class="pillar__desc">Annual flagship fest — keynotes, panels &amp; a ₹1L pitch arena</p>
+          <span class="pillar__arrow" data-arrow>→</span>
+        </a>
+        <a class="pillar" href="#events" data-cursor="view">
+          <span class="pillar__idx">02</span>
+          <h3 class="pillar__name">Ideathons</h3>
+          <p class="pillar__desc">48-hour build sprints from blank page to working demo</p>
+          <span class="pillar__arrow" data-arrow>→</span>
+        </a>
+        <a class="pillar" href="#events" data-cursor="view">
+          <span class="pillar__idx">03</span>
+          <h3 class="pillar__name">Startup Bootcamp</h3>
+          <p class="pillar__desc">A 6-week crash course in customers, cash &amp; code</p>
+          <span class="pillar__arrow" data-arrow>→</span>
+        </a>
+        <a class="pillar" href="#events" data-cursor="view">
+          <span class="pillar__idx">04</span>
+          <h3 class="pillar__name">Incubation Desk</h3>
+          <p class="pillar__desc">Mentors, grants and connections to Pune's startup ecosystem</p>
+          <span class="pillar__arrow" data-arrow>→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Events ===== -->
+    <section class="events section" id="events">
+      <div class="section__head">
+        <span class="section__num reveal">03</span>
+        <span class="section__label reveal">Signature events</span>
+      </div>
+      <div class="events__grid">
+        <article class="event reveal" data-cursor="event">
+          <div class="event__top">
+            <span class="event__date">DEC</span>
+            <span class="event__tag">Flagship</span>
+          </div>
+          <h3 class="event__name">E-Summit '26</h3>
+          <p class="event__meta">Two-day entrepreneurship conclave for founders, investors, startups and students</p>
+        </article>
+        <article class="event reveal" data-cursor="event">
+          <div class="event__top">
+            <span class="event__date">AUG</span>
+            <span class="event__tag">Pitch</span>
+          </div>
+          <h3 class="event__name">InnovateX</h3>
+          <p class="event__meta">Eureka startup pitch deck · in association with E-Cell IIT Bombay</p>
+        </article>
+        <article class="event reveal" data-cursor="event">
+          <div class="event__top">
+            <span class="event__date">OCT</span>
+            <span class="event__tag">Pitch</span>
+          </div>
+          <h3 class="event__name">illuminate</h3>
+          <p class="event__meta">7-hour entrepreneurship workshop with E-Cell IIT Bombay · ₹699/student · IITB startup kit &amp; verified certificate</p>
+        </article>
+        <article class="event reveal" data-cursor="event">
+          <div class="event__top">
+            <span class="event__date">WEEKLY</span>
+            <span class="event__tag">Community</span>
+          </div>
+          <h3 class="event__name">Student Interaction</h3>
+          <p class="event__meta">Friday open-mic for ideas, demos and brutal feedback</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Gallery ===== -->
+    <section class="gallery section" id="gallery">
+      <div class="section__head">
+        <span class="section__num reveal">04</span>
+        <span class="section__label reveal">Moments</span>
+      </div>
+      <h2 class="gallery__title reveal">Scenes from <em>the grind.</em></h2>
+      <p class="gallery__sub reveal">Pitch arenas, build weekends and 2 a.m. demos — shot on campus.</p>
+
+      <div class="gallery__grid" id="galleryGrid"></div>
+    </section>
+
+    <!-- ===== Film / Team reveal ===== -->
+    <section class="film section" id="film">
+      <div class="section__head">
+        <span class="section__num reveal">05</span>
+        <span class="section__label reveal">The reveal</span>
+      </div>
+      <h2 class="film__title reveal">The team, <em>on tape.</em></h2>
+
+      <!-- Drop the video at public/videos/team-reveal.mp4 (16:9).
+           It autoplays muted + loops once the file exists.
+           Click = play/pause · button = sound. -->
+      <figure class="film__frame" id="filmFrame" data-cursor="play">
+        <video class="film__video" id="filmVideo" data-src="./videos/team-reveal.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="film__ph" aria-hidden="true">
+          <svg class="film__ph-icon" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1"/>
+            <path d="M10 8.5v7l6-3.5-6-3.5z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+          </svg>
+          <span class="film__ph-label">Team reveal — reel dropping soon</span>
+        </div>
+        <button class="film__sound" id="filmSound" aria-label="Toggle sound">MUTED</button>
+      </figure>
+      <p class="film__credit reveal">Team Reveal '26 · edit — Prajwal Shinde</p>
+    </section>
+
+    <!-- ===== Team ===== -->
+    <section class="team section" id="team">
+      <div class="section__head">
+        <span class="section__num reveal">06</span>
+        <span class="section__label reveal">The crew</span>
+      </div>
+      <h2 class="team__title reveal">The people <em>behind</em> the cell.</h2>
+
+      <div class="team__advisor" id="teamAdvisor"></div>
+      <div class="team__grid"></div>
+    </section>
+
+
+    <!-- ===== Join / CTA ===== -->
+    <section class="join section" id="join">
+      <div class="join__inner">
+        <p class="join__kicker reveal">07 — Membership open</p>
+        <h2 class="join__title">
+          <span class="reveal">Got an idea</span>
+          <span class="reveal">that won't <em>leave you alone?</em></span>
+        </h2>
+        <form class="join__form reveal" id="joinForm" novalidate>
+          <input class="join__input" id="joinEmail" type="email" placeholder="your@email" autocomplete="email" required />
+          <button class="join__btn magnetic" type="submit" data-cursor="send">
+            <span>Apply</span><i data-arrow>→</i>
+          </button>
+        </form>
+        <p class="join__note reveal" id="joinNote">Open to every department. No CGPA cutoff — just curiosity.</p>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <span class="footer__head">Cell</span>
+          <a href="#next">Up next</a>
+          <a href="#about">About</a>
+          <a href="#pillars">Pillars</a>
+          <a href="#events">Events</a>
+          <a href="#team">Team</a>
+        </div>
+        <div class="footer__col">
+          <span class="footer__head">Socials</span>
+          <a href="https://www.instagram.com/ecelltpp" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/in/e-cell-trinity-polytechnic-pune-796802428/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="footer__col">
+          <span class="footer__head">Campus</span>
+          <span>Trinity Polytechnic, Pune</span>
+          <span>Maharashtra, India</span>
+          <a href="mailto:ecelltpp001@gmail.com">ecelltpp001@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 E-Cell · Trinity Polytechnic Pune</span>
+        <span>Designed &amp; built by the E-Cell tech team</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
